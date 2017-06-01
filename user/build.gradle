@@ -1,0 +1,42 @@
+group 'com.hpe'
+version '1.0'
+
+buildscript{
+    repositories{
+        mavenCentral()
+    }
+    dependencies{
+        classpath("org.flywaydb:flyway-gradle-plugin:4.0.3")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.flywaydb.flyway'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(":common-core")
+    compile project(":abstract")
+}
+
+jar {
+    //指定包含的文件
+    //include xxx.x
+    from('src/main/java') {
+        include 'com/hpe/**/*.xml'
+    }
+}
+
+gradle.projectsEvaluated {
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << "-Xlint:unchecked"
+        options.encoding = "UTF-8"
+    }
+}

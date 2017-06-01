@@ -1,0 +1,5 @@
+rootProject.name = 'app-jpa'
+include 'common-core'
+include 'abstract'
+include 'user'
+
