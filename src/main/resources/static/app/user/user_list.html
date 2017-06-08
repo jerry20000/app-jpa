@@ -1,0 +1,113 @@
+<!-- BEGIN PAGE HEADER-->
+<!-- BEGIN PAGE BAR -->
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <a href="#/dashboard">首页</a>
+            <i class="fa fa-circle"></i>
+        </li>
+        <li>
+            <span>系统维护</span>
+            <i class="fa fa-circle"></i>
+        </li>
+        <li>
+            <span>用户管理</span>
+        </li>
+    </ul>
+</div>
+<!-- END PAGE BAR -->
+<!-- BEGIN PAGE TITLE-->
+<!--<h3 class="page-title"> 用户管理
+    <small>User</small>
+</h3>-->
+<!-- END PAGE TITLE-->
+<!-- END PAGE HEADER-->
+<div class="row">
+    <div class="col-md-12">
+        <!--<div class="note note-info">
+            <p>提示: xxx. </p>
+        </div>-->
+        <div class="portlet">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-shopping-cart"></i>用户列表
+                </div>
+
+                <div class="actions">
+                    <a href="#/user/new" class="btn btn-circle btn-info">
+                        <i class="fa fa-plus"></i>
+                        <span class="hidden-xs"> 新增用户 </span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="table-margin">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label class="sr-only" for="exampleInputCode"></label>
+                        <div class="input-group">
+                            <div class="input-group-addon">编号</div>
+                            <input type="text" class="form-control" id="exampleInputCode">
+                        </div>
+
+                        <label class="sr-only" for="exampleInputName"></label>
+                        <div class="input-group">
+                            <div class="input-group-addon">名称</div>
+                            <input type="text" class="form-control" id="exampleInputName" ng-model="vm.userData.name">
+                        </div>
+                    </div>
+                    <!--<button type="submit" class="btn btn-primary">查询</button>-->
+                    <a href="#" class="btn btn-primary" role="button" ng-click="vm.getUserList()">查询</a>
+                </form>
+            </div>
+
+            <div class="portlet-body">
+                <div class="table-container">
+                    <table class="table table-bordered table-header" ng-controller="UserListController as uCtl">
+                        <thead>
+                        <tr>
+                            <td class="w8">缩略图</td>
+                            <td class="w15">编号</td>
+                            <td class="w15">名称</td>
+                            <td class="w15">分类</td>
+                            <td class="w15">作者</td>
+                            <td class="w15">来源</td>
+                            <td class="w15">操作</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="user in vm.userLists.content">
+                            <td><a href="#/user/view/{{user.id}}" target="_blank"> <img src="../../assets/custom/img/wadang.png" alt="铜印" width="40" height="40" ></a></td>
+                            <td>{{user.id}}</td>
+                            <td>{{user.name}}</td>
+                            <td>{{user.password}}</td>
+                            <td>{{user.name}}</td>
+                            <td>{{user.name}}</td>
+                            <td><a href="#/user/view/{{user.id}}" class="btn btn-link" role="button">修改</a> <a href="#" class="btn btn-danger" role="button" ng-click="vm.remove(user.id)">删除</a></td>
+                        </tr>
+
+                        <!--<tr>
+                            <td><a href="#" target="_blank"><img src="../../assets/custom/img/wadang.png" alt="铜钱" width="40" height="40" ></a></td>
+                            <td>CP0002</td>
+                            <td>铜钱</td>
+                            <td>文房印章</td>
+                            <td>刘备</td>
+                            <td>西安出土</td>
+                            <td><a href="#/user/view/" class="btn btn-link" role="button">修改</a> <a href="#/user/view/" class="btn btn-danger" role="button">删除</a></td>
+                        </tr>-->
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- page begin -->
+                <div class="show-page text-right">
+                    <div my-pagination page-object="userPageObject"></div>
+                </div>
+                <!-- page end -->
+
+            </div>
+        </div>
+    </div>
+</div>

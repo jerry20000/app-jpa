@@ -1,0 +1,111 @@
+<!-- BEGIN HEADER INNER -->
+<div class="page-header-inner">
+    <!-- BEGIN LOGO -->
+    <div class="page-logo">
+        <a href="#/">
+            <img src="{{settings.layoutPath}}/img/logo1.png" alt="大数据服务平台LOGO" class="logo-default"/>
+        </a>
+        <div class="menu-toggler sidebar-toggler"></div>
+        <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+    </div>
+    <!-- END LOGO -->
+
+    <!-- BEGIN HEADER SEARCH BOX -->
+    <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
+
+    <form class="search-form hide" action="#" method="GET">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search..." name="query">
+            <span class="input-group-btn">
+                <a href="javascript:;" class="btn submit">
+                    <i class="icon-magnifier"></i>
+                </a>
+            </span>
+        </div>
+    </form>
+    <!-- END HEADER SEARCH BOX -->
+    <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+    <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse"
+       data-target=".navbar-collapse"> </a>
+    <!-- END RESPONSIVE MENU TOGGLER -->
+
+    <!-- BEGIN TOP NAVIGATION MENU -->
+    <div class="top-menu">
+        <ul class="nav navbar-nav pull-right">
+            <!-- BEGIN NOTIFICATION DROPDOWN -->
+            <li class="dropdown dropdown-extended dropdown-dark dropdown-notification" id="header_notification_bar">
+                <a href="#" class="dropdown-toggle" data-dropdown-menu-hover data-toggle="dropdown"
+                   data-close-others="true">
+                    <i class="icon-bell"></i>
+                    <span class="badge badge-default"> {{vm.notifications.length}} </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="external">
+                        <h3>
+                            <span class="bold">{{vm.notifications.length}} 待处理</span> 通知</h3>
+                        <a href="#/profile/dashboard">查看全部</a>
+                    </li>
+                    <li>
+                        <ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
+                            <li data-ng-repeat="notification in vm.notifications">
+                                <a href="#">
+                                    <span class="time">{{notification.time}}</span>
+                                    <span class="details">
+                                        <span class="label label-sm label-icon label-{{notification.level}}">
+                                            <i class="fa fa-{{notification.icon}}"></i>
+                                        </span> {{notification.message}} </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- END NOTIFICATION DROPDOWN -->
+            <!-- BEGIN INBOX DROPDOWN -->
+            <li class="dropdown dropdown-extended dropdown-dark dropdown-inbox" id="header_inbox_bar">
+                <a href="#" class="dropdown-toggle" data-dropdown-menu-hover data-toggle="dropdown"
+                   data-close-others="true">
+                    <i class="icon-envelope-open"></i>
+                    <span class="badge badge-default"> {{vm.messages.length}} </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="external">
+                        <h3>你有
+                            <span class="bold">{{vm.messages.length}} 新</span> 消息</h3>
+                        <a href="#/profile/dashboard">查看全部</a>
+                    </li>
+                    <li>
+                        <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- END INBOX DROPDOWN -->
+            <!-- BEGIN USER LOGIN DROPDOWN -->
+            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+            <li class="dropdown dropdown-dark dropdown-user">
+                <a href="#" class="dropdown-toggle" data-dropdown-menu-hover data-toggle="dropdown"
+                   data-close-others="true">
+                    <img alt="" class="img-circle" src="{{settings.layoutPath}}/img/avatar.png"/>
+                    <span class="username username-hide-on-mobile"> {{user.name}} </span>
+                    <i class="fa fa-angle-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-default">
+                    <li>
+                        <a href="#/profile/dashboard"><i class="icon-user"></i> 个人资料 </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-settings"></i> 系统设置 </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#"><i class="icon-key"></i> 登出 </a>
+                    </li>
+                </ul>
+            </li>
+            <!-- END USER LOGIN DROPDOWN -->
+        </ul>
+    </div>
+    <!-- END TOP NAVIGATION MENU -->
+</div>
+<!-- END HEADER INNER -->

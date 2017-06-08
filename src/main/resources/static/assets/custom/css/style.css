@@ -1,0 +1,30 @@
+/*表格样式*/
+.table-header thead,.table-header tfoot{ background-color:#f5f6fa; color:#87898b;}
+.table-list{ margin-top:0px;}
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th{border-bottom: 1px solid #e1e6eb;}
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th{border-bottom: 1px solid #e1e6eb;}
+.table-bordered{border: 1px solid #e1e6eb;}
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th{border: 1px solid #e1e6eb;}
+.table-margin{ margin-top:10px;margin-bottom: 10px;}
+tfoot .pagination{ margin:0px;}
+
+/* 分页样式 */
+.x-pagination{width:270px; height:22px;z-index:0;float:right;}
+.x-pagination a.x-page{float:right;width:80px;display:block;background:#ece9e9;color:#939393;line-height:22px;height:22px;text-align:center;font-size:12px;margin-left: 5px;}
+.x-pagination a.x-page:hover{color:#fbce00;}
+.x-pagination a.enable{color:#ccc;}
+.x-pagination a.enable:hover{cursor:not-allowed;color:#ccc;}
+.x-pagination a.x-page b.x-pagetips{margin-top:8px;margin-right:10px;position:relative;}
+.x-pagination .x-page-select{width:80px;height:auto;display:block;position: absolute;/**margin-top:22px;**/ margin-left:105px;background:#ece9e9;/**margin-bottom:100px;**/ z-index: 1000;overflow:hidden;overflow-y:auto;max-height:110px;}
+.x-pagination .x-page-select a{width:auto;display:block;height:22px;line-height:22px;color:#939393;font-size:12px;text-align:center;padding-right:4px;}
+.x-pagination .x-page-select a.cur{background:#fbce00;color:#fff;}
+.x-pagination .x-page-select a.cur:hover{background:#fbce00;color:#fff;}
+.x-pagination .x-page-select a:hover{color:#fbce00;background:#ece9e9;}
+
+/* 禁止样式 */
+/**
+.enable{filter:alpha(opacity=50) !important;-moz-opacity:0.5 !important;-khtml-opacity:0.5 !important;opacity:0.5 !important;cursor:not-allowed;}
+.enable:hover{filter:alpha(opacity=50) !important;-moz-opacity:0.5 !important;-khtml-opacity:0.5 !important;opacity:0.5 !important;cursor:not-allowed;}
+
+.xhover:hover{background:#fff !important;color:#5f5f5f !important;border-color:#fbce00 !important;}
+**/

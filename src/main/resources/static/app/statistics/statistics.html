@@ -1,0 +1,117 @@
+
+<!-- BEGIN PAGE HEADER-->
+<!-- BEGIN PAGE BAR -->
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <a href="#/dashboard">首页</a>
+            <i class="fa fa-circle"></i>
+        </li>
+        <li>
+            <span>统计分析</span>
+        </li>
+    </ul>
+</div>
+<!-- END PAGE BAR -->
+<!-- BEGIN PAGE TITLE-->
+<h3 class="page-title"> 统计分析
+    <small>Statistics</small>
+</h3>
+<!-- END PAGE TITLE-->
+<!-- END PAGE HEADER-->
+
+<!-- BEGIN PIE CHART PORTLET-->
+<div class="row">
+    <div class="col-md-6">
+        <div class="portlet light portlet-fit bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-settings font-red"></i>
+                    <span class="caption-subject font-red bold uppercase">分类占比</span>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div id="chart_1" class="chart"> </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="portlet light portlet-fit bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class=" icon-layers font-green"></i>
+                    <span class="caption-subject font-green bold uppercase">交易量</span>
+                    <span class="caption-helper">月度统计</span>
+                </div>
+                <div class="actions">
+                    <div class="btn-group">
+                        <a href="" class="btn dark btn-outline btn-circle btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> 过滤范围
+                            <span class="fa fa-angle-down"> </span>
+                        </a>
+                        <ul class="dropdown-menu pull-right">
+                            <li>
+                                <a href="javascript:;"> Q1 2016
+                                    <span class="label label-sm label-default"> 过去 </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;"> Q2 2016
+                                    <span class="label label-sm label-default"> 过去 </span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="javascript:;"> Q3 2016
+                                    <span class="label label-sm label-success"> 当前 </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;"> Q4 2016
+                                    <span class="label label-sm label-warning"> 即将到来 </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div id="chart_2_loading">
+                    <img src="assets/global/img/loading.gif" alt="loading" /> </div>
+                <div id="chart_2_content" class="display-none">
+                    <div id="chart_2" style="height: 216px;"> </div>
+                </div>
+                <div style="margin: 20px 0 10px 30px">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3 col-xs-6 text-stat">
+                            <span class="label label-sm label-success"> 总收入: </span>
+                            <h3>¥13,234</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END PIE CHART PORTLET-->
+
+<!-- BEGIN CHART PORTLETS-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN BASIC CHART PORTLET-->
+        <div class="portlet light portlet-fit bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-bar-chart font-green-haze"></i>
+                    <span class="caption-subject font-green-haze bold uppercase">库存量</span>
+                    <span class="caption-helper">库存</span>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div id="chart_3_legendPlaceholder"> </div>
+                <div id="chart_3" class="chart"> </div>
+            </div>
+        </div>
+        <!-- END BASIC CHART PORTLET-->
+    </div>
+</div>
+<!-- END CHART PORTLETS-->

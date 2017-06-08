@@ -1,6 +1,7 @@
 package com.hpe.user.service;
 
 import com.hpe.core.page.PageUtil;
+import com.hpe.core.util.StringUtil;
 import com.hpe.redis.IRedisService;
 import com.hpe.user.IUserService;
 import com.hpe.user.dao.mapper.UserMapper;
@@ -17,6 +18,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,6 +48,7 @@ public class UserService implements IUserService {
     @Override
     public Page<UserVo> getUserPage(String name, Integer currentPage, Integer pageSize) {
         Pageable p = PageUtil.getPageable(currentPage,pageSize);
+        name = StringUtil.getValueStr(name);
         Page<User> userPage = userRepository.findUserPage(name,p);
         List<UserVo> userVoList = new ArrayList<>();
         for (User user: userPage.getContent()){
@@ -96,5 +99,23 @@ public class UserService implements IUserService {
         redisService.setObject(key,userVo);
         logger.info("UserService.getUserById() : 用户插入缓存 >> " + userVo.toString());
         return userVo;
+    }
+
+    @Override
+    @Transactional
+    public int save(UserVo userVo) {
+        if (userVo == null) return -1;
+        User user = new User();
+        BeanUtils.copyProperties(userVo,user);
+        userRepository.save(user);
+        return 1;
+    }
+
+    @Override
+    @Transactional
+    public int remove(Long id) {
+        if (id == null) return -1;
+        userRepository.delete(id);
+        return 1;
     }
 }

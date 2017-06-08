@@ -35,4 +35,18 @@ public interface IUserService {
      * @return
      */
     UserVo getUserById(Long id);
+
+    /**
+     * 新增或修改
+     * @param userVo
+     * @return
+     */
+    int save(UserVo userVo);
+
+    /**
+     * 删除
+     * @param id
+     * @return
+     */
+    int remove(Long id);
 }

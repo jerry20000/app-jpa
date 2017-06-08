@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- <base href="/"> -->
+    <title>Big Data Platform</title>
+
+    <!-- Bootstrap -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <style type="text/css">
+        #panel-login {
+            max-width: 350px;
+        }
+        #panel-login .controls{
+            padding: 0px 15px 15px !important;
+        }
+
+        #panel-login .alert-block{
+            padding: 0px;
+        }
+        #panel-login .alert-block ul{
+            margin: 10px 15px;
+            padding-left: 0px;
+        }
+        #panel-login .alert-block ul li{
+            list-style-type: none;
+        }
+    </style>
+
+    <style type="text/css">
+        .form-signin {
+            max-width: 320px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            -webkit-box-shadow: 0 0px 40px rgba(0,0,0,.2);
+            -moz-box-shadow: 0 0px 40px rgba(0,0,0,.2);
+            box-shadow: 0 0px 40px rgba(0,0,0,.2);
+        }
+    </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="login">
+
+<div class="container">
+
+    <form action="" method="post" id="login-form">
+        <div class="panel panel-default panel-single" id="panel-login">
+            <input type='hidden' name='csrfmiddlewaretoken' value='rpsVZBY2K4iw1H8mJ0EnzUmgJVRg6fj7' />
+            <div class="panel-heading">
+                <h2 class="form-signin-heading"><i class="icon-heart"></i> You will love it</h2>
+                <p class="text-success" style="margin-bottom: 20px;">Login with <b>admin/admin</b></p>
+
+            </div>
+            <div class="panel-body">
+                <div id="div_id_username" class="row">
+                    <div class="controls clearfix">
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                            <input class="form-control input-lg" id="id_username" maxlength="254" name="username" type="text" placeholder="Username">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="div_id_password" class="row">
+                    <div class="controls clearfix">
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+                            <input class="form-control input-lg" id="id_password" name="password" type="password" placeholder="Password">
+                        </div>
+
+                    </div>
+                </div>
+
+                <input type="hidden" name="this_is_the_login_form" value="1" />
+                <input type="hidden" name="next" value="/" />
+
+                <button class="btn btn-lg btn-primary btn-block" type="submit">log in</button>
+
+                <div class="text-info" style="margin-top:15px;"><a href="/xadmin/password_reset/"><i class="fa fa-question-sign"></i> Forgotten your password or username?</a></div>
+            </div>
+
+        </div>
+    </form>
+
+</div> <!-- /container -->
+
+<script type="text/javascript">
+    document.getElementById('id_username').focus()
+</script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="lib/jquery/jquery-2.2.1.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<!-- Angular JS -->
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular/angular-route.js"></script>
+<script src="lib/angular/angular-resource.js"></script>
+</body>
+
+</html>
